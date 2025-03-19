@@ -3,7 +3,7 @@ let originalBg = document.body.style.backgroundColor;
 let textElement = document.getElementById('text');
 let titleElement = document.querySelector('.page-title');
 let activeBox = null;
-let footerElement = document.querySelector('.footer'); // Adicionando o rodapé
+let footerElement = document.querySelector('.footer');
 
 function toggleExpand(event, element, imageUrl, title, text) {
     event.stopPropagation();
