@@ -3,26 +3,24 @@ let originalBg = document.body.style.backgroundColor;
 let textElement = document.getElementById('text');
 let titleElement = document.querySelector('.page-title');
 let activeBox = null;
-let footerElement = document.querySelector('.footer');
+let footerElement = document.querySelector('.footer'); // Adicionando o rodapé
 
-function toggleExpand(event, element, imageUrl, title, text) {
+function toggleExpand(event, element, desktopImage, mobileImage, title, text) {
     event.stopPropagation();
     if (expanded) {
         resetExpand();
     } else {
-        // Esconde as outras esferas
         document.querySelectorAll('.box').forEach(box => {
             if (box !== element) {
                 box.classList.add('hidden');
             }
         });
-       
 
-        // Expande a esfera clicada
         element.classList.add('expand');
-        element.style.backgroundColor = "transparent"; // Remove a cor da esfera
-        
-        // Muda o background do corpo
+        element.style.backgroundColor = "transparent";
+
+        // Definir imagem de fundo diferente para celular e PC
+        let imageUrl = window.innerWidth < 768 ? mobileImage : desktopImage;
         document.body.style.backgroundImage = `url('${imageUrl}')`;
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundPosition = "center";
@@ -33,10 +31,8 @@ function toggleExpand(event, element, imageUrl, title, text) {
             document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
         }
 
-        // Esconde o rodapé durante a expansão
         footerElement.classList.add('hidden');
 
-        // Exibe o texto
         textElement.classList.add('visible');
         titleElement.classList.add('hidden');
 
