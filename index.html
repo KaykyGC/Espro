@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Vagão dos Sonhos</title>
+    <link href="img/esprologo.jpeg" rel="icon" type="image/png">
+</head>
+
+<body onclick="resetExpand(event)">
+    <h1 class="page-title">Bem vindo <br>ao<br>Vagão dos Sonhos</h1>
+
+    <div class="container">
+        <div class="box blue"
+            onclick="toggleExpand(event, this, 'img/fundoblue.jpg', 'Estação', 'Para a realização de um sonho, planejamos diversas formas por dias, horas, meses e até anos, para dar o primeiro passo, que muitos não conseguem dar. Sair da sua estação de conforto se torna um obstáculo perante as situações da vida.')">
+            <img src="img/station.png" alt="Ícone Azul">
+        </div>
+        <div class="box red"
+            onclick="toggleExpand(event, this, 'img/fundored.jpg', 'Vagão', 'O ato de embarcar no vagão em busca dos seus sonhos é um símbolo de encorajamento perante todas as circunstâncias, encarando as situações de cabeça, sendo forte o suficiente para encarar e enfrentar as dificuldades, sendo resiliente e persistente.')">
+            <i class="ti ti-train"></i>
+        </div>
+        <div class="box green"
+            onclick="toggleExpand(event, this, 'img/fundogreen.jpg', 'Trilho', 'Mesmo que todos estejam em um único vagão, cada um trilha seu caminho, mas seguindo um norte onde o final será repleto de sucesso e realização.')">
+            <i class="ti ti-track"></i>
+        </div>
+        <div class="box yellow"
+            onclick="toggleExpand(event, this, 'img/fundoyellow.jpg', 'Terminal identidade', 'Depois de nosso trem passar pelos caminhos da dificuldade e perseverança, chegamos ao destino do sucesso, onde cada um conquista o que tanto almejou em sua trajetória, deixando a identidade de cada um marcada durante todo o percurso.')">
+            <i class="ti ti-fingerprint"></i>
+        </div>
+    </div>
+
+    <div id="text" class="text">
+        <h2 id="title"></h2>
+        <p id="content"></p>
+    </div>
+    <!-- Rodapé -->
+<div class="footer">
+    Desenvolvido por <a href="https://www.linkedin.com/in/kayky-de-faria-garcia-costa-a1a487287/" target="_blank">Kayky Garcia</a>
+</div>
+
+
+    <script src="script.js"></script> <!-- Vincula o arquivo JS -->
+    
+</body>
+
+</html>
